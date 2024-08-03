@@ -11,5 +11,16 @@
   "dependencies": {
     "express": "^4.19.2",
     "module-alias": "^2.2.3"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@controllers": "./controllers",
+    "@models": "./models",
+    "@routes": "./routes",
+    "@configs": "./configurations",
+    "@views": "./views"
+    
+   
+   
   }
 }

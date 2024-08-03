@@ -1,12 +1,18 @@
 const express = require('express');
 
 const app = express();
-const port = 3000;
 
-app.get('/', (req, res) => {
-    res.send('Hello, World!');
-});
+// this will register the module alias.
+require('module-alias/register');
 
-app.listen(port, () => {
-    console.log(`Server is running on port ${port}`);
+// Importing Application Configuration
+const appConfig = require('@configs/developement.config.js');
+
+
+// Registering Routes
+require('@routes/api.routes')(app);
+require('@routes/web.routes')(app);
+
+app.listen(appConfig.port, () => {
+    console.log(`Server is running on port ${appConfig.port}`);
 });
