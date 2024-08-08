@@ -4,11 +4,13 @@
   "description": "A link shortener made by and for causmic devs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch" : "concurrently \"nodemon\" \"npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css --watch\""
   },
   "author": "Ekuspreet Singh & Raghav Jit",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^8.2.2",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "module-alias": "^2.2.3"
@@ -19,6 +21,10 @@
     "@models": "./models",
     "@routes": "./routes",
     "@configs": "./configurations",
-    "@views": "./views"
+    "@views": "./views",
+    "@bulma": "./node_modules/bulma/css/"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.8"
   }
 }
