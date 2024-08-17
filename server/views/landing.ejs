@@ -4,12 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/output.css">
+  <link rel="icon" href="/assets/favicon.svg">
   <title>CSMC-Link-Shortener</title>
 </head>
 <body>
       <%- include('./partials/navbar.ejs') %>
+      <%- include('./partials/hero.ejs') %>
+      <%- include('./partials/features.ejs', { 
+        features: [
+        {"name" : "Browser Extension",
+         "svgPath" : `/assets/browser.svg`}, 
+        {"name" :  "Windows Menu"
+        , "svgPath" : `/assets/windows.svg`},
+        {
+          "name" : "Linux Menu",
+          "svgPath" : `/assets/linux.svg`
+        },
+        {
+          "name" : "Android App",
+          "svgPath" : `/assets/android.svg`}
+        
+        ]}
+         ) %>
+
 
       <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script src="/js/index.js"></script>
 </body>
 </html>

@@ -1,10 +1,6 @@
-// importing controllers to assign to the routes.
-
-
-function apiRoutes(app) {
-    app.get('/api/', (req, res) => {
-      res.send('Hello World');
-    });
-  }
+// importing controllers to assign to the routes
+const generateController = require('@controllers/api/generate.controller');
   
-  module.exports = apiRoutes;
+module.exports = (app)=>{
+  app.use('/generate', generateController);
+};
